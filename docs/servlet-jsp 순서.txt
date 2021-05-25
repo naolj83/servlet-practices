@@ -1,0 +1,28 @@
+servlet-practices
+ - helloweb
+ - emaillist01( Model + 1( Jsp ) )
+ - guestbook01( Model + 1( Jsp ) )
+ - emaillist02( Model + 2( JSP, Servlet) : MVC )
+ - guestbook02( Model + 2( JSP, Servlet) : MVC )
+
+spring-practice
+ - hellospring
+ - guestbook03
+ - uploadtest
+ - containner
+ - aoptest 
+
+mysite
+ - mysite02( Model2, MVC )
+ - mysite03( Spring MVC, xml config )
+ - mysite04( Spring MVC, Java config1 )
+ - mysite05( Spring MVC, Java config2 )
+ - mysite06( Spring MVC, Spring Boot )
+
+jblog
+ - jblog03( Spring MVC, xml config )
+ - jblog04( Spring MVC, Java config1 )
+ - jblog05( Spring MVC, Java config2 )
+ - jblog06( Spring MVC, Spring Boot )
+
+http://192.168.80.131:8080//
