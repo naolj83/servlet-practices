@@ -7,6 +7,15 @@ com.douzone.emaillist.vo
 	|-- EmaillistVo
 
 
+guestbook01
+com.douzone.guestbook.dao
+	|-- GuestbookDao
+com.douzone.guestbook.dao.test
+	|-- GuestbookDaoTest
+com.douzone.guestbook.vo
+	|-- GuestbookVo
+
+
 servlet-practices
  - helloweb
  - emaillist01( Model + 1( Jsp ) )
