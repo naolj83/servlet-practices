@@ -1,14 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-<h2>삭제 되었습니다.</h2>
-		<a href="<%=request.getContextPath() %>">메인으로</a>
-
-</body>
-</html>
+<%@page import="com.douzone.guestbook.vo.GuestbookVo"%>
+<%@page import="com.douzone.guestbook.dao.GuestbookDao"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("utf-8");
+	String no = request.getParameter("no");
+	String password = request.getParameter("password");
+	
+	GuestbookVo vo = new GuestbookVo();
+	vo.setNo(Long.parseLong(no));
+	vo.setPassword(password);
+	
+	new GuestbookDao().delete(vo);
+	
+	response.sendRedirect(request.getContextPath());
+%>
