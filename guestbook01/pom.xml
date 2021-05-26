@@ -9,8 +9,8 @@
 	</parent>
 	<artifactId>guestbook01</artifactId>
 	<packaging>war</packaging>
-	
-	  	<dependencies>
+
+	<dependencies>
 		<!-- MariaDB JDBC Driver -->
 		<dependency>
 			<groupId>org.mariadb.jdbc</groupId>
@@ -18,5 +18,9 @@
 			<version>2.7.2</version>
 		</dependency>
 	</dependencies>
-	
+
+	<build>
+		<finalName>guestbook01</finalName>
+	</build>
+
 </project>
