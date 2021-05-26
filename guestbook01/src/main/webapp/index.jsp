@@ -5,7 +5,6 @@
 	pageEncoding="UTF-8"%>
 <%
 List<GuestbookVo> list = new GuestbookDao().findAll();
-int count = list.size();
 %>
 <html>
 <head>
@@ -38,14 +37,16 @@ int count = list.size();
 	<br>
 	<h2>작성한 방명록입니다.</h2>
 	<%
+		int count = list.size();
+		int index = 0;
 		for(GuestbookVo vo : list) {
 	%>
 	<table width=510 border=1>
 		<tr>
-			<td>[<%=count-- %>]</td>
+			<td>[<%=count-index++ %>]</td>
 			<td><%=vo.getName() %></td>
 			<td><%=vo.getRegDate() %></td>
-			<td><a href="<%=request.getContextPath()%>/deleteform.jsp?no=">삭제</a></td>
+			<td><a href="<%=request.getContextPath()%>/deleteform.jsp?no=<%=vo.getNo() %>">삭제</a></td>
 			
 		</tr>
 		<tr>

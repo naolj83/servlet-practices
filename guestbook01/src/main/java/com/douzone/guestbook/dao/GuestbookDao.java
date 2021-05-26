@@ -89,7 +89,7 @@ public class GuestbookDao {
 
 	
 	public List<GuestbookVo> findAll() {
-		List<GuestbookVo> result = new ArrayList<>();
+		List<GuestbookVo> list = new ArrayList<>();
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -118,7 +118,7 @@ public class GuestbookDao {
 				vo.setMessage(message);
 				vo.setRegDate(regDate);
 				
-				result.add(vo);
+				list.add(vo);
 			}
 		} catch (SQLException e) {
 			System.out.println("error:" + e);
@@ -138,7 +138,7 @@ public class GuestbookDao {
 			}
 		}
 
-		return result;
+		return list;
 	}
 
 	private Connection getConnection() throws SQLException {
