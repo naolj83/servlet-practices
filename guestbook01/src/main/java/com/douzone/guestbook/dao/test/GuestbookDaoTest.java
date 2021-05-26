@@ -35,8 +35,8 @@ public class GuestbookDaoTest {
 	
 	private static void deleteTest() {
 		GuestbookVo vo = new GuestbookVo();
-		vo.setNo(9L);
-		vo.setPassword("qlqjs");
+		vo.setNo(7L);
+		vo.setPassword("뽀로로비번");
 		
 		new GuestbookDao().delete(vo);
 		
