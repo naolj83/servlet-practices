@@ -6,7 +6,29 @@ com.douzone.emaillist.dao.test
 com.douzone.emaillist.vo
 	|-- EmaillistVo
 
+======================================================
+emaillist02
 
+src/main/java
+com.douzone.emaillist.controller
+	|-- EmaillistContronller
+com.douzone.emaillist.dao
+	|-- EmaillistDao
+com.douzone.emaillist.vo
+	|-- EmaillistVo
+
+webapp
+	|-- WEB-INF
+	          |-- web.xml
+		    |-- views
+		           |-- index.jsp
+		           |-- form.jsp
+(add.jsp는 전부자바코드라서 controller로 넘어오니까 작성 필요x)
+
+/el?a=any&name=안대혁 -> get방식(browser가 엔코딩 해줌)
+직접하는 방법 : Servers -> Tomcat v8.5 . . . -> server.xml 에 <Connector connectionTimeout="20000" URIEncoding="utf-8" port="8080" protocol="HTTP/1.1" redirectPort="8443"/> 
+
+========================================================
 guestbook01
 com.douzone.guestbook.dao
 	|-- GuestbookDao
@@ -15,6 +37,27 @@ com.douzone.guestbook.dao.test
 com.douzone.guestbook.vo
 	|-- GuestbookVo
 
+========================================================
+guestbook02 구현 가이드
+
+[1]
+src/main.java
+com.douzone.guestbook.controller
+	|-- GuestbookController (/gb)
+com.douzone.guestbook.dao
+	|-- GuestbookDao
+com.douzone.guestbook.vo
+	|-- GuestbookVo
+
+[2]
+webapp
+	|-- WEB-INF
+	          |-- web.xml
+		    |-- views
+		           |-- index.jsp
+		           |-- deleteform.jsp
+
+==========================================================
 
 servlet-practices
  - helloweb
