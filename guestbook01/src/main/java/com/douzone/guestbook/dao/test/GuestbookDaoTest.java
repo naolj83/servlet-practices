@@ -11,6 +11,7 @@ public class GuestbookDaoTest {
 
 	public static void main(String[] args) {
 //		insertTest();
+		deleteTest();
 		findAllTest();
 	}
 
@@ -30,6 +31,15 @@ public class GuestbookDaoTest {
 		vo.setRegDate(LocalDateTime.now().toString());
 		
 		new GuestbookDao().insert(vo);
+	}
+	
+	private static void deleteTest() {
+		GuestbookVo vo = new GuestbookVo();
+		vo.setNo(9L);
+		vo.setPassword("qlqjs");
+		
+		new GuestbookDao().delete(vo);
+		
 	}
 		
 }

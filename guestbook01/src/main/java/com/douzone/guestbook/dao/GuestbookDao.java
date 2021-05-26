@@ -50,6 +50,44 @@ public class GuestbookDao {
 		return result;
 	}
 
+	public Boolean delete(GuestbookVo vo) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		boolean result = false;
+
+		try {
+			conn = getConnection();
+
+			String sql = "delete " +
+						 " from guestbook" +
+						 "   where no = ? " +
+						 " and password = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setLong(1, vo.getNo());
+			pstmt.setString(2, vo.getPassword());
+
+			int count = pstmt.executeUpdate();
+			result = count == 1;
+
+		} catch (SQLException e) {
+			System.out.println("error:" + e);
+		} finally {
+			try {
+				if (pstmt != null) {
+					pstmt.close();
+				}
+				if (conn != null) {
+					conn.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+
+		return result;
+	}
+
+	
 	public List<GuestbookVo> findAll() {
 		List<GuestbookVo> result = new ArrayList<>();
 
