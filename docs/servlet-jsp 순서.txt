@@ -52,8 +52,8 @@ com.douzone.guestbook.vo
 [2]
 webapp
 	|-- WEB-INF
-	          |-- web.xml
-		    |-- views
+	     |-- web.xml
+		      |-- views
 		           |-- index.jsp
 		           |-- deleteform.jsp
 
