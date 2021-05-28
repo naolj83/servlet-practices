@@ -31,6 +31,7 @@ public class CookieServlet extends HttpServlet {
 		cookie.setPath(request.getContextPath());
 		cookie.setMaxAge(24*60*60);	// 1day
 		response.addCookie(cookie);
+		
 
 		response.setContentType("text/html; charset=utf-8");
 		
