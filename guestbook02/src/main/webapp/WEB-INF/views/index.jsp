@@ -1,8 +1,7 @@
 <%@page import="com.douzone.guestbook.dao.GuestbookDao"%>
 <%@page import="com.douzone.guestbook.vo.GuestbookVo"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 List<GuestbookVo> list = (List<GuestbookVo>)request.getAttribute("list");
 %>
